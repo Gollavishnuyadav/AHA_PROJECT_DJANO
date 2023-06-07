@@ -1,0 +1,130 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Login</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+    body
+      {
+        background-color: rgb(0, 0, 0);
+      }
+      .img
+      {
+        border-radius: 20px;
+        width: 200px;
+        height: 300px;
+      }
+      h1
+      {
+        margin: 10px;
+        color: #a393e8;
+        font-weight:bolder;
+        font-size: medium;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      img {
+  
+  
+        transition: transform .2s; /* Animation */
+        
+        margin: 0 auto;
+      }
+      .container-fluid
+      {
+          background-color: rgb(72, 67, 67);
+          margin: -10px;
+          font-weight: bolder;
+      }
+      .plus
+      {
+        border-radius: 100%;
+        margin-left: 0px;
+        background-color: red;
+      }
+      button
+      {
+        width: 200px;
+        background-color: rgb(214, 178, 33);
+        color: red;
+      }
+      p
+      {
+        color: white;
+      }
+</style>
+<h1>CONTINUE WATCHING</h1>
+<p>Looks like you have nothing in your continue watching. You can watch from your downloads or add something</p>
+<img src="https://tse2.mm.bing.net/th?id=OIP.DRHFmPNCYOOA2Z6OcERpYgHaHa&pid=Api&P=0&h=180" align="right" class="plus">
+<a href="{% url 'home' %}" class="nav-link"><button class="btn btn-primary">Go to Home</a></button>
+<br>
+<br>
+<h1>WATCH LIST</h1>
+<p>Looks like you have nothing in your continue watching. You can watch from your downloads or add something</p>
+<a href="{% url 'home' %}" class="nav-link"><button class="btn btn-primary">Go to Home</a></button>
+
+<h1>MOST POPULAR ON AHA</h1>
+<div class="container-fluied">
+  <div class="row">
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/4A7A688C-967D-40FF-9E42-16C5D3572402/0-2x3.jpg?width=240" class="img">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/29324A8B-FCFB-4FAB-A2AD-9D361DE1B70B/0-2x3.jpg?width=240" class="img">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/854159CB-2C65-4946-9C12-A43960A3496F/0-2x3.jpg?width=240" class="img">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/C6173B91-AE67-4DF1-BB7D-E4C8FEAD143C/0-2x3.jpg?width=240" class="img">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/E9F1B1FE-D492-4132-A6CB-5EC5928BEB9F/0-2x3.jpg?width=240" class="img">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/1CF9242D-C994-48BC-A094-01D0D2280B9C/0-2x3.jpg?width=240" class="img">
+      </div>
+  </div>
+</div>
+
+<h1>SINGING</h1>
+<div class="container-fluied">
+  <div class="row">
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/0260D885-98E5-4758-B3BB-F805B32D1733/0-2x3.jpg?width=240" class="img">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/E8509131-19BD-4746-A149-4A1FD3840AF6/0-2x3.jpg?width=240" class="img">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/1327DF1A-19E0-4B3F-9B09-5B16AA8A4355/0-2x3.jpg?width=240" class="img">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/6D0C16F6-4C32-4D2D-8E9D-504D79F436FD/0-2x3.jpg?width=240" class="img">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/22CFEE49-9D5C-4B17-83F8-2E86F8929BF9/0-2x3.jpg?width=240" class="img">
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+          <img src="https://image-resizer-cloud-api.akamaized.net/image/F8A7C17B-2046-4D7B-8AF4-E8F2ECD9E9CE/0-2x3.jpg?width=240" class="img">
+      </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,153 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Login</title>
+{% endblock %}
+
+{% block body_block %}
+	<script src="https://kit.fontawesome.com/e681d559bc.js" crossorigin="anonymous"></script>
+	<style>
+        *
+        {
+            margin: 0px;
+        }
+		.form
+		{
+			width: 500px;
+			height: 500px;			
+			margin-left: 100px;
+            margin-top: 70px;
+			border-radius: 10px;
+			padding: 25px;
+		
+
+		}
+		.form:hover
+		{
+			
+			cursor: pointer;
+			
+		}
+		body
+		{
+			background-image: url("https://th.bing.com/th/id/R.dade9aa519f5b20ff745a0b616610b8a?rik=2nNL62XT3%2b5Xjg&riu=http%3a%2f%2fs1.bwallpapers.com%2fwallpapers%2f2014%2f08%2f06%2fofficial-avatar-movie-poster_084742918.jpg&ehk=A%2bw9lpLC%2foj2mk5QO3vMW9FBj8xM70XTawBGdXRKMxE%3d&risl=&pid=ImgRaw&r=0");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		input
+		{
+			width: 240px;
+			height: 35px;
+			background: transparent;
+			border-top: none;
+			border-right: none;
+			border-left:none;
+			border-bottom: 1px solid gray;
+			color: navy;
+			font-size: 15px;
+			border-radius: 5px;
+			letter-spacing: 1px;
+			margin-top: 30px;
+			font-family: sans-serif;
+		}
+		.btn
+		{
+			width: 240px;
+			height: 40px;
+			background: #ff7200;
+			border-radius:10px ;
+			text-align: center;
+			cursor: pointer;
+			font-size: 18px;
+			
+			border: none;
+		}
+		.btn:hover
+		{
+			border-radius: 100px;
+			background-color: cyan;
+			box-shadow:0 0 5px 5px #888888;
+
+		}
+		a
+		{
+			text-decoration: none;
+			color: white;
+		}
+		.lii
+		{
+			padding-top: 15px;
+			padding-bottom: 10px;
+			text-align: center;
+			margin-top: 5px;
+		}
+		.lion>a
+		{
+			justify-content: center;
+			padding: 20px;
+		}
+		.lion>a:hover
+		{
+			color:rgb(185, 255, 23);
+			width: 150px;
+			height: 100px;
+		}
+        .pp
+        {
+            color: rgba(73, 218, 20, 0.779);
+        }
+        img
+        {
+            width: 100px;
+            height: 100px;
+            margin-left: 60px;
+            margin-top: -10px;
+            border-radius: 100%;
+        }
+        .link
+        {
+            color: rgb(165, 229, 229);
+        }
+        .ll
+        {
+            border: none;
+            
+        }
+        .btn
+        {
+            margin-left: 10px;
+            font-size: medium;
+            font-weight: bold;
+        
+        }
+	</style>
+</head>
+<body>
+		<div class="content">
+			<div class="form">
+                <img src="https://www.centrik.in/wp-content/uploads/2017/02/user-image-.png">
+                <form method="POST">
+                    {% csrf_token %}
+                    <input type="text" name="un" id="un" placeholder="Username">
+                    <br>
+                    <input type="password" id="pw" name="pw" placeholder="Password">
+                    <button class="btn btn-primary">submit<input type="submit" value="" style="color:red ;" class="ll"></button>
+                </form>
+				<a href="{% url 'reset_password' %}" class="nav-link">Forget password</a>
+				<a href="">Sign up here with</a>
+                <p class="pp">By continuing, you agree to Aha's Conditions of Use and Privacy Notice</p>
+				<div class="lion">
+					<a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+					<a href="https://twitter.com/?lang=en-in"><i class="fa-brands fa-square-twitter"></i></a>
+					<a href="https://www.google.com/"><i class="fa-brands fa-google"></i></a>
+					<a href="https://www.instagram.com/?hl=en"><i class="fa-brands fa-square-instagram"></i></a>
+					<iframe width="5" height="5" src="https://www.youtube.com/embed/wbkfuO0havc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+{% endblock %} 
+

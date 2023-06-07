@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Document</title>
+    {% endblock %}
+   
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+rel="stylesheet"
+/>
+
+<link
+href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
+rel="stylesheet"
+/>
+</head>
+<style>
+    a
+    {
+        margin: 10px;
+        color: white;
+    }
+    .container-fluid
+    {
+        background-color: rgb(43, 41, 41);
+        margin: -10px;
+        font-weight: bolder;
+    }
+    .navbar-nav a
+    {
+        color: white;
+    }
+    .btn
+    {
+        margin-left: 300px;
+        background-color: rgb(255, 166, 0);
+        border-radius: 50px;
+        height: 50px;
+        margin-top: 6px;
+    }
+   
+</style>
+
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="https://res.cloudinary.com/dbxe3v9mq/image/upload/v1685462022/5ec39ea2f4130d44176268c0_1589878434760-removebg-preview_rf6gj5.png" width="100px" height="50px">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+
+           
+
+                
+              <a href="{% url 'shows' %}" class="nav-link">Shows</a>
+
+              <a class="nav-link" href="{% url 'indian_idel' %}" class="btn btn-info" style="color:aliceblue">Indian idol</a>
+              <a href="{% url 'My_aha' %}" class="nav-link">My aha</a>
+              <a href="{% url 'admin:index' %}" class="nav-link">Admin</a>
+              <a href="{% url 'kid' %}" class="nav-link">kids</a>
+              <a href="{% url 'registration' %}" class="nav-link">Register</a>
+              <a href="{% url 'home' %}" class="nav-link">Home</a>
+
+
+         {% if user.is_authenticated %}
+        <a href="{% url 'display_profile' %}" class="nav-link">Profile</a>
+        <a href="{% url 'change_password' %}" class="nav-link">Change password</a>
+        <a href="{% url 'user_logout' %}" class="nav-link">Logout</a>
+
+      {% else %} 
+      <a href="{% url 'login_form' %}" class="nav-link">Login</a>
+      {% endif %}
+
+      
+        
+            <h2></h2>
+            <form>
+            </form>
+            </div>
+            </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    
+
+
+
+
+
+
+
+
+
+
+    {% block body_block %}
+
+    {% endblock %}
+</body>
+
+<script
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
+></script>
+</html>

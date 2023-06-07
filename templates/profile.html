@@ -1,0 +1,50 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Register</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+    body
+    {
+        background-image: url("https://ak0.picdn.net/shutterstock/videos/1469920/thumb/1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+
+    }
+    .div
+    {
+        
+        width: 300px;
+     
+    }
+    .img
+    {
+        border-radius: 900px;
+    }
+    h1
+    {
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        font-size: medium;
+        color:rgb(231, 215, 215);
+    }
+</style>
+
+<body>
+    <center>
+        <div class="div">
+        <img src="{{PO.profile_pic.url}}" alt="No Image" height="300px" width="300px" class="img">
+
+        <h1>USERNAME:{{US.username}}</h1>
+        <h1>EMAIL:{{US.email}}</h1>
+        <h1>ADDRESS:{{PO.address}}</h1>
+
+    </div>
+    </center>
+</body>
+
+{% endblock %}
+

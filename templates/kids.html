@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><!-- Font Awesome -->
+   <!-- Font Awesome -->
+   <script src="https://kit.fontawesome.com/e681d559bc.js" crossorigin="anonymous"></script>
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
+></script>
+<style>
+    a
+    {
+        margin: 10px;
+        color: white;
+    }
+    .container-fluid
+    {
+        background-color: rgb(43, 41, 41);
+        margin: -10px;
+        font-weight: bolder;
+    }
+    .navbar-nav a
+    {
+        color: white;
+    }
+    .btn
+    {
+        margin-left: 400px;
+        background-color: rgb(255, 166, 0);
+        border-radius: 50px;
+        height: 50px;
+        margin-top: 6px;
+    }
+    .login-popup 
+    {
+        display: none;
+
+        position: absolute;
+        
+        
+        background: rgb(34,193,195);
+        background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(244,45,253,1) 100%);
+
+        border: 1px solid #ca7d7d;
+        z-index: 1;
+      }
+      i
+      {
+        color: red;
+        font-size:10px;
+        font-weight: bold;
+      }
+      
+      .login-container:hover .login-popup
+     {
+        display: block;
+        border-radius: 30px;
+        padding: 20px;
+    
+
+      }
+      body
+      {
+        background-color: rgb(10, 5, 5);
+      }
+      .img
+      {
+        border-radius: 50px;
+      }
+      h1
+      {
+        margin: 10px;
+        color: white;
+        font-weight: bolder;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+      img {
+  
+  
+        transition: transform 0 1s; /* Animation */
+        
+        margin: 0 auto;
+      }
+      
+      img:hover {
+        transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+      }
+      .login-link
+      {
+        margin-top: 50px;
+      }
+      .footer
+      {
+        background-color: rgb(23, 19, 19);
+      }
+      .pop
+      {
+        
+        height: 50px;
+        width: 100px;
+        border-radius: 50px;
+        background: rgb(34,193,195);
+        background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+      }
+</style>
+    <title>Document</title>
+</head>                        
+<body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <img src="https://res.cloudinary.com/dbxe3v9mq/image/upload/v1685462022/5ec39ea2f4130d44176268c0_1589878434760-removebg-preview_rf6gj5.png" width="100px" height="50px">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+
+              <a href="{% url 'home' %}" class="nav-link">Home</a>
+              
+              <a href="{% url 'shows' %}" class="nav-link">Shows</a>
+
+              
+              <a href="{% url 'My_aha' %}" class="nav-link">My aha</a>
+             
+           
+              <a class="nav-link" href="{% url 'indian_idel' %}" class="btn btn-info" style="color:aliceblue">Indian idol</a>
+
+            
+           <button class="btn btn-primary" class="btn">Subscription</button>
+    
+
+      </nav>
+      <div id="carouselExampleCaptions" class="carousel slide" data-mdb-ride="carousel">
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-mdb-target="#carouselExampleCaptions"
+            data-mdb-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-mdb-target="#carouselExampleCaptions"
+            data-mdb-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-mdb-target="#carouselExampleCaptions"
+            data-mdb-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://image-resizer-cloud-api.akamaized.net/image/AE0B5149-A41D-492E-9031-9D00DA960641/0-3x1.jpg?width=2304" class="d-block w-100" alt="Wild Landscape"/ height="500px">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <img src="https://image-resizer-cloud-api.akamaized.net/image/A58C083C-585A-4A6F-BB39-0272D41669E8/0-3x1.jpg?width=2304" class="d-block w-100" alt="Wild Landscape"/ height="500px">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>
+          <div class="carousel-item active">
+            <img src="https://image-resizer-cloud-api.akamaized.net/image/D63864BB-29C7-46C2-98BE-9E679222E6D6/0-3x1.jpg?width=2304" class="d-block w-100" alt="Wild Landscape"/ height="500px">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </div>
+          </div>5
+        <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <h1>New Release</h1>
+      <div class="container-fluied">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+              <a href="{% url 'homee' %}"><img src="https://image-resizer-cloud-api.akamaized.net/image/CC8D49CA-250E-4597-AE67-883FAFA4CB2D/0-2x3.jpg?width=240" class="img"></a>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/FCC38212-3998-4995-A158-3E0F67A9F016/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/10B7F92A-26E0-4E68-A2E2-91C43A3E22FB/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/4C0B57CA-811D-4D8E-B8E9-2ABA8214CBE7/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/92D5CB84-64E5-40DF-89B5-CBB341647200/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/0807C7A0-703B-4758-8418-039C86FD287C/0-2x3.jpg?width=240" class="img">
+            </div>
+        </div>
+      </div>
+      <h1>Free Movies</h1>
+      <div class="container-fluied">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/53EE8CB1-E3B2-4C62-82F3-EC0C677F6639/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/C6A8C26F-85E8-4847-8792-2DC69722177F/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/E1393AA6-177A-419F-80D6-0B40F698AC90/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/271250CD-2EA5-470D-BC37-350E2DE700ED/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/D63864BB-29C7-46C2-98BE-9E679222E6D6/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+              <a href="{% url 'hanuman' %}"><img src="https://image-resizer-cloud-api.akamaized.net/image/11975FAE-738D-4EBE-B4F2-48BB7A4EC758/0-2x3.jpg?width=240" class="img"></a>
+            </div>
+        </div>
+      </div>
+      <h1>MAYA LOKAM</h1>
+      <div class="container-fluied">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/5F6ACE14-ADF9-40BF-AA47-9F345EDADA43/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/5904BE0D-D6C5-4D26-9E01-B416F2599EBF/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/FA2E64AA-1021-442F-A08E-56AE925CEA7D/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/7DA21884-3389-45E5-BF87-3D6E61F64381/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/35691090-70D4-4F41-99FE-B16E26A82FC0/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/17C62E6C-1250-4E99-A940-EAAFEB7E7A9B/0-2x3.jpg?width=240" class="img">
+            </div>
+        </div>
+      </div>
+      <h1>MAHA GANESHA</h1>
+      <div class="container-fluied">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/54D13CDB-47BD-4F5E-8CF3-DDCFE9437319/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/491B19A1-B08F-4A7D-8D7B-FCB4DD3A04E5/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/49D86AA6-08BE-4554-A954-1FBFB96FBA41/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/E951A125-2904-4941-BD5F-06DC45148C6E/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/BB557ADF-CD29-4238-8CA5-230404B9E6B3/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/49D86AA6-08BE-4554-A954-1FBFB96FBA41/0-2x3.jpg?width=240" class="img">
+            </div>
+        </div>
+      </div>      
+      <h1>MYSTICAL OBJECTS</h1>
+      <div class="container-fluied">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/86828D77-C920-4819-95E7-3991E433A631/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/69A9F71B-B591-4E36-B602-A96BDEA4FEFD/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/EAB8128B-0811-446C-9A48-8362D91F54FE/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/82E7E3E1-1603-4279-92A5-2CC0BC887FD6/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/F0A4D0EE-7207-479E-82F5-3754A8870E9F/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/ACBB0187-3FA0-4ED3-8347-7D4BFC655708/0-2x3.jpg?width=240" class="img">
+            </div>
+        </div>
+      </div>      
+      <h1>MYSTICAL OBJECTS</h1>
+      <div class="container-fluied">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/75CE13BA-B288-4C5E-930E-4736E5516136/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/8452B810-EC91-401F-9A37-D319AF3810A7/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/42B5F186-CD10-41EC-BFBF-2B43B3C24395/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/97CC59F5-1C65-4925-BE52-7DEB56007E82/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/86310079-7A7F-4695-A538-B0CB99DA091A/0-2x3.jpg?width=240" class="img">
+            </div>
+            <div class="col-12 col-md-6 col-lg-3 col-xl-2">
+                <img src="https://image-resizer-cloud-api.akamaized.net/image/19A1F439-DF99-4F11-949C-0D101BC15BB4/0-2x3.jpg?width=240" class="img">
+            </div>
+        </div>
+      </div>      
+      
+      <!-- Footer -->
+<footer class="text-center text-lg-start bg-black text-muted" class="footer">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Get connected with us on social networks:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 link-secondary">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <img src="https://res.cloudinary.com/dbxe3v9mq/image/upload/v1685462330/5ec39ea2f4130d44176268c0_1589878434760-removebg-preview_vjm8wt.png" width="300px" height="300px">
+          </h6>
+          <p>
+            Here you can use rows and columns to organize your footer content. Lorem ipsum
+            dolor sit amet, consectetur adipisicing elit.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Products
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Angular</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">React</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Vue</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Laravel</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Useful links
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Pricing</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Settings</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Orders</a>
+          </p>
+          <p>
+            <a href="#!" class="text-reset">Help</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i class="fas fa-home me-3 text-secondary"></i> New York, NY 10012, US</p>
+          <p>
+            <i class="fas fa-envelope me-3 text-secondary"></i>
+            info@example.com
+          </p>
+          <p><i class="fas fa-phone me-3 text-secondary"></i> + 01 234 567 88</p>
+          <p><i class="fas fa-print me-3 text-secondary"></i> + 01 234 567 89</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</body>
+</html>

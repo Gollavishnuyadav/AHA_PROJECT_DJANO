@@ -1,0 +1,113 @@
+{% extends 'dummy.html' %}
+
+{% block title %}
+<title>Register</title>
+{% endblock %}
+
+{% block body_block %}
+<style>
+    body
+    {
+        background-image: url("https://cdn.wallpapersafari.com/76/85/fFsbXB.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    form
+    {
+        margin-top: 50px;
+    }
+    .one
+    {
+  
+        color: white;
+        font-size: medium;
+        width: 950px;
+        border-radius: 2%;
+        font-weight: bold;
+    
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    textarea
+    {
+        border-radius: 80px;
+        height: 10px;
+    }
+    input
+    {
+        background-color: bisque;
+        border-radius: 5%;
+        margin-top: 10px;
+    
+    }
+    input
+    {
+        color: rgb(221, 45, 45);
+        border-radius: 1%;
+    }
+    textarea{
+        width: 200px;
+        height: 100px;
+    }
+    .div
+    {
+        margin-top: 100px;
+        
+        width: 600px;
+        height: 500px;
+        border-radius: 5%;
+    }
+    .btn
+    {
+        margin-left: 20px;
+    }
+    .lion>a
+    {
+        justify-content: center;
+        padding: 20px;
+    }
+    .lion>a:hover
+    {
+        color:rgb(185, 255, 23);
+        width: 150px;
+        height: 100px;
+    }
+    h1
+    {
+        font-size: larger;
+        font-weight: bolder;
+        font-style: normal;
+        font-size: 40px;
+        color: rgb(11, 168, 182);
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+</style>
+<body>
+    <center>
+        <h1>REGISTER</h1>
+        <div class="one">
+        <form method="POST" enctype="multipart/form-data">
+            <div class="div">
+            {% csrf_token %}
+                {{ufo.as_p}}
+                {{pfo.as_p}}
+                <input type="submit" value="register" class="btn btn-secondary">
+                <p class="link">Don't have an account</p>
+				<div class="lion">
+					<a href=""><i class="fa-brands fa-facebook"></i></a>
+					<a href=""><i class="fa-brands fa-square-twitter"></i></a>
+					<a href=""><i class="fa-brands fa-google"></i></a>
+					<a href=""><i class="fa-brands fa-square-instagram"></i></a>
+					<iframe width="5" height="5" src="https://www.youtube.com/embed/wbkfuO0havc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				</div>
+
+
+
+
+            </div>
+        </form>
+    </div>
+</center>
+</body>
+{% endblock %}
